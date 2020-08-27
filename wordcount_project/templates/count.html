@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>count</title>
+</head>
+<body>
+    <a href="{% url 'home' %}">Go Back</a>
+    <h1>Word count of your text is {{ count }}</h1>
+    <h3> Your Text is below : </h3>
+    {{ fulltext }}
+    <h3> Their individual word frequency</h3>
+    {{ wordfreq }}
+    <h3> In other easy format</h3>
+    {% for word, wordcount in wordfreq %}
+        {{ word }} {{ wordcount }}
+        <br/>
+    {% endfor %}
+</body>
+</html>
